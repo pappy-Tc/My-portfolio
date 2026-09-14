@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <script src="tailwind.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>#ashtag | Frontend Developer & Web Designer</title>
+
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body class="bg-[#08090d] text-white">
+
+    <!-- NAVBAR  -->
+
+    <nav class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-[#08090d]/75 backdrop-blur-xl">
+
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+
+            <!-- Logo -->
+            <a href="#home"
+                class="text-3xl font-bold tracking-tight text-white transition duration-300 hover:text-cyan-600">
+                #ashtag<span class="text-cyan-400">.</span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <div class="hidden items-center gap-8 md:flex">
+
+                <a href="#home"
+                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                    Home
+                </a>
+
+                <a href="about.html" class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+     
+                    About
+                </a>
+
+        
+
+                <a href="projects.html"
+                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                    Projects
+                </a>
+
+                <a href="#services"
+                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                    Services
+                </a>
+
+                <a href="#contact"
+                    class="rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition duration-300 hover:border-cyan-600/15 hover:text-cyan-600">
+                    Let's Talk
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn"
+                class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-gray-300 transition duration-300 hover:border-cyan-600 hover:text-cyan-600 md:hidden"
+                aria-label="Open navigation menu">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6">
+
+                    <path stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="hidden border-t border-white/10 bg-[#08090d]/95 px-6 py-6 md:hidden">
+
+            <div class="flex flex-col gap-5">
+
+                <a href="#home"
+                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    Home
+                </a>
+
+                <a href="#about"
+                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    About
+                </a>
+
+                <a href="#skills"
+                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    Skills
+                </a>
+
+                <a href="#projects"
+                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    Projects
+                </a>
+
+                <a href="#services"
+                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    Services
+                </a>
+
+                <a href="#contact"
+                    class="mobile-link text-sm font-medium text-cyan-600">
+                    Let's Talk →
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- CONTENT  -->
+
+    <main id="home">
+
+
+<!--  HERO  -->
+
+<section class="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+
+    <!-- Background Glow -->
+    <div
+        class="pointer-events-none absolute left-1/2 top-1/4 -z-10 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl">
+    </div>
+
+
+    <div class="mx-auto max-w-7xl px-6">
+
+        <div class="grid items-center gap-16 lg:grid-cols-2">
+
+
+            <!--  HERO CONTENT  -->
+
+            <div>
+
+                <!-- Availability -->
+                <div class="hero-animate hero-delay-1 mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2">
+
+                    <span class="h-2 w-2 animate-pulse rounded-full bg-cyan-300"></span>
+
+                    <span class=" text-sm text-gray-400">
+                        Available for remote opportunities
+                    </span>
+
+                </div>
+
+
+                <!-- Main Heading -->
+                <h1 class="hero-animate hero-delay-1 max-w-3xl text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+
+                    I build digital
+                    <span class="experience-glow text-cyan-400"> experiences </span>
+                    that stand out.
+
+                </h1>
+
+
+                <!-- Description -->
+                <p class="hero-animate hero-delay-3 mt-7 max-w-xl text-base leading-8 text-gray-400 sm:text-lg">
+
+                    I'm #ashtag, a junior frontend developer and web designer
+                    focused on creating modern, responsive and user-friendly
+                    digital experiences.
+
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="hero-animate hero-delay-4 mt-9 flex flex-wrap gap-4">
+
+                    <a
+                        href="projects.html"
+                        class="rounded-full bg-cyan-400 px-6 py-3.5 text-sm font-semibold text-black transition duration-300 hover:bg-cyan-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.25)]">
+
+                        View My Work
+                        <span class="ml-2">→</span>
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="rounded-full border border-white/10 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:border-cyan-400/15 hover:text-cyan-400">
+
+                        Let's Talk
+
+                    </a>
+
+                </div>
+
+
+                <!-- Technologies -->
+                <div class="mt-12">
+
+                    <p class="mb-4 text-xs uppercase tracking-[0.2em] text-gray-400">
+                        Technologies I work with
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-gray-500">
+
+                        <span>HTML5</span>
+                        <span class="text-gray-600">/</span>
+
+                        <span>CSS3</span>
+                        <span class="text-gray-600">/</span>
+
+                        <span>JavaScript</span>
+                        <span class="text-gray-600">/</span>
+
+                        <span>Tailwind CSS</span>
+                        <span class="text-gray-600">/</span>
+
+                        <span>Git</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!--  HERO VISUAL  -->
+
+            <div class="relative flex min-h-[420px] items-center justify-center lg:min-h-[520px]">
+
+                <!-- Decorative Circle -->
+                <div
+                    class="hero-glow absolute h-72 w-72 rounded-full border border-cyan-400/10 shadow-[0_0_100px_rgba(34,211,238,0.08)] sm:h-96 sm:w-96">
+                </div>
+
+
+                <!-- Code Card -->
+                <div
+                    class="code-card relative w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-[#101218]/90 shadow-2xl backdrop-blur-xl">
+
+                    <!-- Window Header -->
+                    <div class="flex items-center gap-2 border-b border-white/10 px-5 py-4">
+
+                        <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+                        <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+                        <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+
+                        <span class="ml-auto text-xs text-gray-500">
+                            developer.js
+                        </span>
+
+                    </div>
+
+
+                    <!-- Code -->
+                    <div class="p-6 font-mono text-sm leading-8">
+
+                        <p>
+                            <span class="text-purple-400">const</span>
+                            <span class="text-white"> developer </span>
+                            <span class="text-gray-500">=</span>
+                            <span class="text-gray-400"> {</span>
+                        </p>
+
+                        <p class="pl-5">
+                            <span class="text-cyan-400">name:</span>
+                            <span class="text-green-300"> "#ashtag"</span>,
+                        </p>
+
+                        <p class="pl-5">
+                            <span class="text-cyan-400">role:</span>
+                            <span class="text-green-300"> "Frontend Developer"</span>,
+                        </p>
+
+                        <p class="pl-5">
+                            <span class="text-cyan-400">focus:</span>
+                            <span class="text-green-300"> "Modern Web"</span>,
+                        </p>
+
+                        <p class="pl-5">
+                            <span class="text-cyan-400">status:</span>
+                            <span class="text-green-300"> "Building..."</span>
+                        </p>
+
+                        <p class="text-gray-400">
+                            };
+                        </p>
+
+                    </div>
+
+
+                    <!-- Bottom Status -->
+                    <div class="border-t border-white/10 px-6 py-4">
+
+                        <div class="flex items-center justify-between">
+
+                            <span class="text-xs text-gray-500">
+                                Currently learning
+                            </span>
+
+                            <span class="text-xs text-cyan-400">
+                                Full-Stack Development
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    </main>
+
+
+
+</body>
+
+</html>
+
