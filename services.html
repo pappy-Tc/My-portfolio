@@ -259,7 +259,15 @@
         </div>
 
         <!-- Contact Form -->
-        <form id="contact-form" class="space-y-5">
+       <form name="contact"
+         method="POST"
+         data-netlify="true"
+         id="contact-form"
+         class="space-y-5"
+        
+        >
+
+        <input type="hidden" name="form-name" value="contact">
 
             <!-- Name -->
             <div>
