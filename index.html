@@ -41,11 +41,11 @@
             <div class="hidden items-center gap-8 md:flex">
 
                 <a href="#home"
-                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                    class="border-b border-cyan-400 pb-1 text-sm text-cyan-400 transition duration-300 hover:text-cyan-300">
                     Home
                 </a>
 
-                <a href="about.html" class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                <a href="about.html" class="text-sm text-gray-300 transition duration-300 hover:text-cyan-400">
      
                     About
                 </a>
@@ -53,16 +53,18 @@
         
 
                 <a href="projects.html"
-                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-400">
                     Projects
                 </a>
 
-                <a href="#services"
-                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-600">
+                <a href="services.html"
+                    class="text-sm text-gray-300 transition duration-300 hover:text-cyan-400">
                     Services
                 </a>
+                  
 
-                <a href="#contact"
+                  <a  href="#"
+                    id="open-modal"
                     class="rounded-full border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition duration-300 hover:border-cyan-600/15 hover:text-cyan-600">
                     Let's Talk
                 </a>
@@ -100,31 +102,32 @@
             <div class="flex flex-col gap-5">
 
                 <a href="#home"
-                    class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
+                    class="mobile-link text-sm font-medium text-cyan-400 transition hover:text-cyan-300">
                     Home
                 </a>
 
-                <a href="#about"
+                <a href="about.html"
                     class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
                     About
                 </a>
 
-                <a href="#skills"
+                <a href="about.html#skills"
                     class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
                     Skills
                 </a>
 
-                <a href="#projects"
+                <a href="projects.html"
                     class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
                     Projects
                 </a>
 
-                <a href="#services"
+                <a href="services.html"
                     class="mobile-link text-sm text-gray-300 transition hover:text-cyan-600">
                     Services
                 </a>
 
                 <a href="#contact"
+                     id="open-modal"
                     class="mobile-link text-sm font-medium text-cyan-600">
                     Let's Talk →
                 </a>
@@ -206,7 +209,8 @@
 
 
                     <a
-                        href="#contact"
+                        href="#"
+                        id="open-modal-2"
                         class="rounded-full border border-white/10 px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:border-cyan-400/15 hover:text-cyan-400">
 
                         Let's Talk
@@ -343,7 +347,204 @@
     </main>
 
 
+<!-- LET'S TALK MODAL -->
+<div
+    id="contact-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 px-4 py-6 backdrop-blur-md"
+>
+    <!-- Modal -->
+    <div
+        id="contact-modal-box"
+        class="modal-box relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl border border-white/10 bg-cyan-200/15 p-6 shadow-[0_0_60px_rgba(34,211,238,0.08)] sm:p-8"
+    >
 
+        <!-- Close Button -->
+        <button
+            id="close-modal"
+            type="button"
+            class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-400"
+            aria-label="Close contact modal"
+        >
+            ✕
+        </button>
+
+        <!-- Heading -->
+        <div class="mb-7 pr-10">
+            <p class="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-cyan-400">
+                Let's Talk
+            </p>
+
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Have a project in mind?
+            </h2>
+
+            <p class="mt-3 text-sm leading-6 text-white/50">
+                Let's build something clean, modern and impactful together.
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="space-y-5">
+
+            <!-- Name -->
+            <div>
+                <label
+                    for="name"
+                    class="mb-2 block text-sm font-medium text-white/70"
+                >
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your name"
+                    required
+                    class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-all duration-300 placeholder:text-white/25 focus:border-cyan-400/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-cyan-400/30"
+                >
+            </div>
+
+            <!-- Email -->
+            <div>
+                <label
+                    for="email"
+                    class="mb-2 block text-sm font-medium text-white/70"
+                >
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    class="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-all duration-300 placeholder:text-white/25 focus:border-cyan-400/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-cyan-400/30"
+                >
+            </div>
+
+            <!-- Message -->
+            <div>
+                <label
+                    for="message"
+                    class="mb-2 block text-sm font-medium text-white/70"
+                >
+                    Message
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell me a little about your project..."
+                    required
+                    class="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition-all duration-300 placeholder:text-white/25 focus:border-cyan-400/50 focus:bg-white/[0.05] focus:ring-1 focus:ring-cyan-400/30"
+                ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="w-full rounded-xl bg-cyan-400 px-5 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:bg-cyan-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.25)]"
+            >
+                Send Message
+            </button>
+
+        </form>
+
+        <!-- Divider -->
+        <div class="my-7 flex items-center gap-4">
+            <div class="h-px flex-1 bg-white/10"></div>
+
+            <span class="text-xs uppercase tracking-widest text-white/30">
+                or connect
+            </span>
+
+            <div class="h-px flex-1 bg-white/10"></div>
+        </div>
+
+
+        <!-- Social Icons -->
+<div class="flex justify-center gap-3">
+
+    <!-- X / Twitter -->
+    <a
+        href=""
+        aria-label="X / Twitter"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-4 w-4"
+        >
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.964 6.817H1.684l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a
+        href=" https://wa.me/2348069224005"
+        aria-label="WhatsApp"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+        >
+            <path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.4 8.4 0 0 1-4.1-1.05L3 20l1.1-5.1A8.4 8.4 0 0 1 3 10.8 8.5 8.5 0 1 1 21 11.5Z"/>
+            <path d="M8.5 8.5c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.5.6c-.1.1-.2.3-.1.5.3.6 1.1 1.7 2.1 2.3.3.2.5.2.7 0l.7-.8c.2-.2.4-.2.7-.1l1.6.8c.3.1.4.3.3.6-.1.5-.3 1-.7 1.2-.4.3-1 .4-1.6.2-1-.3-2.2-1-3.4-2.1-1.1-1-2-2.2-2.4-3.1-.4-.8-.4-1.5 0-2Z"/>
+        </svg>
+    </a>
+
+    <!-- Email -->
+    <a
+        href="mailto:hashtagdevelopers@gmail.com"
+        aria-label="Email"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+        >
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m3 7 9 6 9-6"/>
+        </svg>
+    </a>
+
+    <!-- GitHub -->
+    <a
+        href="https://github.com/pappy-Tc"
+        aria-label="GitHub"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/60 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="h-4 w-4"
+        >
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.59 2 12.25c0 4.53 2.865 8.37 6.84 9.72.5.095.682-.22.682-.49 0-.24-.009-1.03-.014-1.87-2.782.62-3.369-1.37-3.369-1.37-.455-1.18-1.11-1.5-1.11-1.5-.91-.64.069-.63.069-.63 1.005.073 1.533 1.06 1.533 1.06.894 1.57 2.341 1.12 2.913.86.091-.67.35-1.12.636-1.38-2.22-.26-4.555-1.14-4.555-5.07 0-1.12.39-2.04 1.029-2.76-.103-.26-.446-1.31.098-2.73 0 0 .84-.276 2.75 1.054A9.2 9.2 0 0 1 12 7.4c.85.004 1.705.118 2.505.345 1.91-1.33 2.748-1.054 2.748-1.054.546 1.42.203 2.47.1 2.73.64.72 1.028 1.64 1.028 2.76 0 3.94-2.339 4.81-4.565 5.06.359.32.679.95.679 1.92 0 1.38-.012 2.49-.012 2.83 0 .27.18.59.688.49A10.26 10.26 0 0 0 22 12.25C22 6.59 17.523 2 12 2Z" clip-rule="evenodd"/>
+        </svg>
+    </a>
+
+</div>
+    </div>
+</div>
 </body>
 
 </html>
