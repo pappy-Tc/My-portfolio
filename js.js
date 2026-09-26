@@ -38,86 +38,42 @@ if ("IntersectionObserver" in window) {
 
 
 
-// Let's Talk Modal
+// Contact modal: use delegated handling so desktop, mobile, and page CTAs
+// all open the same form, including when an element is repeated in the markup.
 const contactModal = document.getElementById("contact-modal");
 const contactModalBox = document.getElementById("contact-modal-box");
-const openModal = document.getElementById("open-modal");
-const closeModal = document.getElementById("close-modal");
 
-openModal.addEventListener("click", (event) => {
+function openContactModal(event) {
     event.preventDefault();
+    if (!contactModal || !contactModalBox) return;
 
     contactModal.classList.remove("hidden");
     contactModal.classList.add("flex");
-
-    // Trigger opening animation
-    requestAnimationFrame(() => {
-        contactModalBox.classList.add("show");
-    });
-});
+    requestAnimationFrame(() => contactModalBox.classList.add("show"));
+}
 
 function closeContactModal() {
-    contactModalBox.classList.remove("show");
+    if (!contactModal || !contactModalBox) return;
 
-    setTimeout(() => {
+    contactModalBox.classList.remove("show");
+    window.setTimeout(() => {
         contactModal.classList.add("hidden");
         contactModal.classList.remove("flex");
     }, 300);
 }
 
-closeModal.addEventListener("click", closeContactModal);
+document.querySelectorAll("#open-modal, #open-modal-2, [data-open-contact]")
+    .forEach((trigger) => trigger.addEventListener("click", openContactModal));
 
-contactModal.addEventListener("click", (event) => {
-    if (event.target === contactModal) {
-        closeContactModal();
-    }
-});
+const closeModalButton = document.getElementById("close-modal");
+if (closeModalButton) closeModalButton.addEventListener("click", closeContactModal);
 
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeContactModal();
-    }
-});
-
-
-
-// Let's Talk Modal 2
-const contactModal2 = document.getElementById("contact-modal");
-const contactModalBox2 = document.getElementById("contact-modal-box");
-const openModal2 = document.getElementById("open-modal-2");
-const closeModal2 = document.getElementById("close-modal");
-
-openModal2.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    contactModal2.classList.remove("hidden");
-    contactModal2.classList.add("flex");
-
-    // Trigger opening animation
-    requestAnimationFrame(() => {
-        contactModalBox2.classList.add("show");
+if (contactModal) {
+    contactModal.addEventListener("click", (event) => {
+        if (event.target === contactModal) closeContactModal();
     });
-});
-
-function closeContactModal() {
-    contactModalBox2.classList.remove("show");
-
-    setTimeout(() => {
-        contactModal2.classList.add("hidden");
-        contactModal2.classList.remove("flex");
-    }, 300);
 }
 
-closeModal2.addEventListener("click", closeContactModal);
-
-contactModal2.addEventListener("click", (event) => {
-    if (event.target === contactModal2) {
-        closeContactModal();
-    }
-});
-
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeContactModal();
-    }
+    if (event.key === "Escape") closeContactModal();
 });
